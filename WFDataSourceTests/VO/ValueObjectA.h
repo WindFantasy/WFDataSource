@@ -3,7 +3,6 @@
 //  WFDataSourceTests
 //
 //  Created by Jerry on 2020/1/5.
-//  Copyright © 2020 Wind Fant. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,10 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ValueObjectA : NSObject
-@property (nonatomic, strong) NSData *text;
+@property (nonatomic, copy) NSData *text;
 @property (nonatomic, assign) float decimal;
-@property (nonatomic, assign, readonly) NSInteger readonlyValue;
-@property (nonatomic, strong) NSNumber *numberObject;
+@property (nonatomic, readonly, assign) NSInteger readonlyValue;
+@property (nonatomic, copy) NSNumber *numberObject;
 @end
 
 NS_ASSUME_NONNULL_END

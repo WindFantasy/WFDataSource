@@ -3,7 +3,6 @@
 //  WFDataSourceTests
 //
 //  Created by Jerry on 2019/12/21.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol BasicSelectDao <NSObject>
 -(NSString *)selectHelloWorld;
+-(NSString *)selectUnicode;
 -(NSInteger)selectNumber;
 -(double)selectDecimal;
 -(NSDate *)selectDate;

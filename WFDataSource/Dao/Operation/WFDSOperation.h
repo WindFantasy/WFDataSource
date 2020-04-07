@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/21.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -15,8 +14,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WFDSOperation : NSObject
-@property (nonatomic, weak, readonly) WFDSDataAccessObject *dao;
-@property (nonatomic, strong, readonly) WFDSOperationDefinition *definition;
+@property (nonatomic, readonly, weak) WFDSDataAccessObject *dao;
+@property (nonatomic, readonly, strong) WFDSOperationDefinition *definition;
 
 -(instancetype)initWithElement:(id<WFDSScriptAccess>)element;
 -(void)performInvocation:(NSInvocation *)invocation;

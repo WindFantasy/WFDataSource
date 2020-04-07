@@ -3,7 +3,6 @@
 //  WFDataSourceTests
 //
 //  Created by Jerry on 2019/12/5.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -184,5 +183,9 @@
     XCTAssertEqual(o.decimal, 3.14);
     XCTAssertEqualObjects(o.text, @"Hello World");
     XCTAssertEqualObjects(o.date, [NSDate dateWithTimeIntervalSinceReferenceDate:1000.1234]);
+}
+-(void)test15 {
+    NSString *m = [self.dao selectUnicode];
+    XCTAssertEqualObjects(m, @"好好学习，天天向上!");
 }
 @end

@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/9.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSResultSet.h"
@@ -11,7 +10,7 @@
 #import "wfds.h"
 
 @interface WFDSResultSet()
-@property (nonatomic, assign, readonly) sqlite3_stmt *stmt;
+@property (nonatomic, readonly, assign) sqlite3_stmt *stmt; 
 @end
 
 @implementation WFDSResultSet{

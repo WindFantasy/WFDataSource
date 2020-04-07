@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao>
+    <insert selector="insert:" table="employee"/>
+    
+    <update selector="update:" table="employee"
+        exclude="eid"
+        where="eid=:eid"/>
+        
+    <select selector="selectLatestEid"><![CDATA[
+        SELECT eid FROM employee
+        ORDER BY eid DESC
+        LIMIT 0, 1
+    ]]></select>
+        
+    <select selector="selectAll" type="EmployeeEntity" trace="true"><![CDATA[
+        SELECT * FROM employee
+    ]]></select>
+    
+    <select selector="selectEmployeesWithPid:" type="EmployeeEntity"><![CDATA[
+        SELECT * FROM membership m
+        LEFT JOIN employee e ON e.eid=m.eid
+        WHERE m.pid=?
+    ]]></select>
+</dao>
+

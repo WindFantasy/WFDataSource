@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/21.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSDataAccessObject.h"
@@ -11,9 +10,6 @@
 #import <objc/runtime.h>
 #import "WFDSOperation+Internal.h"
 #import "wfdao.h"
-
-@interface WFDSDataAccessObject()
-@end
 
 @implementation WFDSDataAccessObject{
     NSMutableDictionary<NSString *, WFDSOperation *> *_operations;
@@ -37,9 +33,7 @@
     if (!operation) {
         @throw wfdao_exception(nil, @"Definition not found.");
     }
-    @synchronized (_connection) {
-        [operation performInvocation:anInvocation];
-    }
+    [operation performInvocation:anInvocation];
 }
 -(void)addOperation:(WFDSOperation *)operation{
     NSString *selectorName = operation.definition.selectorName;

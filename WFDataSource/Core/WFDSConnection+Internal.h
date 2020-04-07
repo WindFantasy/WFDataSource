@@ -3,15 +3,15 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2020/1/2.
-//  Copyright © 2020 Wind Fant. All rights reserved.
 //
+
 #import "WFDSConnection.h"
 #import "WFDSStatement.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WFDSConnection()
-@property (nonatomic, nullable, readonly) sqlite3 *sqlite;
+@property (nonatomic, readonly, nullable) sqlite3 *sqlite;
 
 +(instancetype)connectionForMemorySource;
 

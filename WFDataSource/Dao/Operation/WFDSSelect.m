@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/21.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSSelect.h"
@@ -37,6 +36,9 @@ id wfdao_converRowToObject(WFDSResultSet *resultSet, sqlite3_stmt *stmt, WFDSEnt
 -(instancetype)initWithElement:(id<WFDSScriptAccess>)element{
     self = [super initWithElement:element];
     if (self) {
+        if (self.definition.sql == nil) {
+            @throw wfdao_exception(nil, @"Operation '%@' missing sql statement.", self.definition.selectorName);
+        }
         NSString *targetClass = element.type;
         if (targetClass.length > 0) {
             WFDSEntityHints *hints = [[WFDSEntityHints alloc] init];

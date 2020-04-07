@@ -3,7 +3,6 @@
 //  WFDataSourceTests
 //
 //  Created by Jerry on 2020/1/3.
-//  Copyright © 2020 Wind Fant. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSUInteger)updateRecordShortcut:(BasicValueObject *)record;
 
 -(BasicValueObject *)selectRecord;
+-(BasicValueObject *)selectUnicodeRecord;
 -(NSArray<BasicValueObject *> *)selectRecords;
 @end
 

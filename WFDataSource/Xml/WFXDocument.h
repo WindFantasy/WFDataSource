@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/7.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WFXDocument : NSObject
-@property (nonatomic, weak, readonly) WFXmlParser *parser;
+@property (nonatomic, readonly, weak) WFXmlParser *parser;
 @property (nonatomic, readonly) WFXGeneralElement *root;
 @property (nonatomic, readonly) WFXGeneralElement *tail;
 

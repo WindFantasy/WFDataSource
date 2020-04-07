@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/6.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSStreamProcessor.h"
@@ -54,7 +53,7 @@
     NSInteger version = wfds_getUserVersion(connection);
     
     NSArray<NSString *> *paths = [bundle pathsForResourcesOfType:@"stream.xml" inDirectory:nil];
-    paths = [paths sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"SELF" ascending:YES]]];
+    paths = [paths sortedArrayUsingSelector:@selector(compare:)];
     
     NSInteger v = 0;
     for (NSString *p in paths) {
@@ -68,14 +67,9 @@
 -(void)connection:(WFDSConnection *)connection process:(NSString *)path{
     _connection = connection;
     NSURL *url = [NSURL fileURLWithPath:path];
-    @try {
-        [_connection begin];
-        [_parser parseContentsOfURL:url];
-        [_connection commit];
-    } @catch (NSException *exception) {
-        [_connection rollback];
-        @throw exception;
-    }
+    [_connection performTransaction:^{
+        [self->_parser parseContentsOfURL:url];
+    }];
 }
 #pragma mark - WFXmlParserDelegate
 -(void)parser:(WFXmlParser *)parser didEndElement:(id<WFXElement>)element{

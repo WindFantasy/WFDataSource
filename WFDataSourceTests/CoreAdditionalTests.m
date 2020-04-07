@@ -3,7 +3,6 @@
 //  WFDataSourceTests
 //
 //  Created by Jerry on 2020/1/5.
-//  Copyright © 2020 Wind Fant. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -86,14 +85,5 @@
     XCTAssertNoThrow([connection close], @"Should not throw.");
     XCTAssertNoThrow([connection close], @"Should not throw.");
 }
-//-(void)test08 {
-//    // Dealloc a connection without closing it should throw an exception.
-//    id e;
-//    @try {
-//        __weak WFDSConnection *connection = [WFDSConnection connectionForMemorySource];
-//    } @catch (NSException *exception) {
-//        e = exception;
-//    }
-//}
 
 @end

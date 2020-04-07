@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2020/1/4.
-//  Copyright © 2020 Wind Fant. All rights reserved.
 //
 
 #import "wfxsd.h"

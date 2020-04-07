@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/21.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSOperation+Internal.h"
@@ -64,9 +63,6 @@
     WFDSStatement *statement = [self.dao.connection prepareStatement:self.definition.sql];
     @try {
         [self statement:statement bindParametersWithArgumentsFromInvocation:invocation];
-        if (self.definition.trace) {
-            wfdao_infoA(self, @"Execute SQL ...");
-        }
         _c = [statement executeUpdate];
         [invocation setReturnValue:&_c];
     } @catch (NSException *exception) {
@@ -76,6 +72,10 @@
     }
 }
 -(void)statement:(WFDSStatement *)statement bindParametersWithArgumentsFromInvocation:(NSInvocation *)invocation{
+    if (self.definition.trace) {
+        wfdao_infoA(self, @"Execute SQL ...");
+    }
+    
     NSMethodSignature *signature = invocation.methodSignature;
     int argCount = (int)signature.numberOfArguments - 2;
     
@@ -119,7 +119,9 @@
             sqlite3_bind_null(stmt, i);
         } else if ([value isKindOfClass:NSString.class]) {
             NSString *text = value;
-            sqlite3_bind_text(stmt, i, text.UTF8String, (int)text.length, SQLITE_STATIC);
+            // to resolve unicode encoding issue. text.UTF8String, text.length not going to work for unicode
+            NSData *d = [text dataUsingEncoding:NSUTF8StringEncoding];
+            sqlite3_bind_text(stmt, i, d.bytes, (int)d.length, SQLITE_STATIC);
         } else if ([value isKindOfClass:NSNumber.class]) {
             NSNumber *number = value;
             switch (number.objCType[0]) {
@@ -133,7 +135,7 @@
                     sqlite3_bind_double(stmt, i, number.doubleValue);
                     break;
                 default:
-                    @throw wfdao_exception(self, @"Bind argument failed. Entity: '%@', Property: '%@'.", NSStringFromClass([obj class]), name);
+                    @throw wfdao_exception(self, @"Bind argument failed. Numeric property MUST type of BOOL, NSInteger or double. Entity: '%@', Property: '%@'.", NSStringFromClass([obj class]), name);
                     break;
             }
         } else if ([value isKindOfClass:NSDate.class]) {

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppDateField">
+            <connections>
+                <outlet property="datePicker" destination="sk6-tJ-8RE" id="hfJ-kt-lM7"/>
+                <outlet property="theInputView" destination="Pok-uw-ZCb" id="Wbd-me-4Pe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Pok-uw-ZCb">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk6-tJ-8RE">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="-336762260.42386901">
+                        <!--1990-05-01 06:55:39 +0000-->
+                    </date>
+                    <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
+                        <!--1950-01-01 11:00:00 +0000-->
+                    </date>
+                    <date key="maximumDate" timeIntervalSinceReferenceDate="315486000">
+                        <!--2010-12-31 11:00:00 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="actionSetDate:" destination="-1" eventType="valueChanged" id="rmc-E7-zXf"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="sk6-tJ-8RE" firstAttribute="bottom" secondItem="Pok-uw-ZCb" secondAttribute="bottom" id="Ktc-VK-Ty6"/>
+                <constraint firstItem="sk6-tJ-8RE" firstAttribute="trailing" secondItem="Pok-uw-ZCb" secondAttribute="trailing" id="R2U-3G-f7H"/>
+                <constraint firstItem="sk6-tJ-8RE" firstAttribute="top" secondItem="BVz-JP-TlZ" secondAttribute="top" id="ZRA-Uf-EaL"/>
+                <constraint firstItem="sk6-tJ-8RE" firstAttribute="leading" secondItem="Pok-uw-ZCb" secondAttribute="leading" id="hwb-hB-mQQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="BVz-JP-TlZ"/>
+            <point key="canvasLocation" x="141" y="462"/>
+        </view>
+    </objects>
+</document>

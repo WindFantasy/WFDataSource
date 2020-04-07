@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/9.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class WFDSStatement;
 
 @interface WFDSResultSet : NSObject
-@property (nonatomic, weak, readonly) WFDSStatement *statement;
+@property (nonatomic, readonly, weak) WFDSStatement *statement;
 @property (nonatomic, readonly) NSInteger numColumn;
 
 +(instancetype)resultSetWithStatement:(WFDSStatement *)statement;

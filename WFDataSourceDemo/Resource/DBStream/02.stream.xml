@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<execute>
+    <statement><![CDATA[
+        INSERT INTO employee (eid, first_name, last_name, dob, gender, position, salary)
+        VALUES ('eid-000001', 'Jerry', 'Huang', strftime('%s', '2001-01-01 00:00:00') - strftime('%s', '2001-01-01 00:00:00'), 1, 'iOS Developer', 100000);
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO employee (eid, first_name, last_name, dob, gender, position, salary)
+        VALUES ('eid-000002', 'John', 'Smith', strftime('%s', '1990-05-05 00:00:00') - strftime('%s', '2001-01-01 00:00:00'), 1, 'Java Developer', 70000);
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO employee (eid, first_name, last_name, dob, gender, position, salary)
+        VALUES ('eid-000003', 'May', 'Freeland', strftime('%s', '1980-12-12 00:00:00') - strftime('%s', '2001-01-01 00:00:00'), 0, 'HR Manager', 110000);
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO employee (eid, first_name, last_name, dob, gender, position, salary)
+        VALUES ('eid-000004', 'Danie', 'Chen', strftime('%s', '1988-10-02 00:00:00') - strftime('%s', '2001-01-01 00:00:00'), 0, 'UI Designer', 80000);
+    ]]></statement>
+    
+    <statement><![CDATA[
+        INSERT INTO project (pid, name, desc, buget, status, priority)
+        VALUES ('pid-000001', 'WFDataSource', 'An Objective-C framework to do SQLite things.', 1000, 'Finished', 1);
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO project (pid, name, desc, buget, status, priority)
+        VALUES ('pid-000002', 'WFDataSourceDemo', 'An App to show how WFDataSource works.', 3000, 'Processing', 2);
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO project (pid, name, desc, buget, status, priority)
+        VALUES ('pid-000003', 'WFStream', 'An Objective-C framework to JAVA sequential-stream things.', 500, 'Finished', 1);
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO project (pid, name, desc, buget, status, priority)
+        VALUES ('pid-000004', "Jerry's Birthday Party", 'Happy birthday Jerry!', 300, 'Preparing', 3);
+    ]]></statement>
+    
+    <statement><![CDATA[
+        INSERT INTO membership (pid, eid)
+        VALUES ('pid-000001', 'eid-000001');
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO membership (pid, eid)
+        VALUES ('pid-000002', 'eid-000001');
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO membership (pid, eid)
+        VALUES ('pid-000003', 'eid-000001');
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO membership (pid, eid)
+        VALUES ('pid-000004', 'eid-000002');
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO membership (pid, eid)
+        VALUES ('pid-000004', 'eid-000003');
+    ]]></statement>
+    <statement><![CDATA[
+        INSERT INTO membership (pid, eid)
+        VALUES ('pid-000004', 'eid-000004');
+    ]]></statement>
+</execute>

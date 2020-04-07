@@ -29,6 +29,9 @@
         SELECT * FROM my_table
         LIMIT 0, 1
     ]]></select>
+    <select selector="selectUnicodeRecord" type="@BasicValueObject"><![CDATA[
+        SELECT '好好学习，天天向上!' text
+    ]]></select>
     
     <select selector="selectRecords" type="BasicValueObject"><![CDATA[
         SELECT * FROM my_table

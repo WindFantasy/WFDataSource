@@ -3,7 +3,6 @@
 //  WFDataSourceTests
 //
 //  Created by Jerry on 2020/1/3.
-//  Copyright © 2020 Wind Fant. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -259,5 +258,32 @@
     
     records = [self.dao selectRecords];
     XCTAssertEqual(records.count, 0);
+}
+-(void)test05 {
+    // test unicode encoding
+    BasicValueObject *src = [[BasicValueObject alloc] init];
+    src.identity = @"id001";
+    src.booleanValue = YES;
+    src.number = 8848;
+    src.decimal = 1.60218;
+    src.text = @"好好学习，天天向上!";
+    src.date = [NSDate dateWithTimeIntervalSinceNow:1000];
+    
+    NSUInteger n = [self.dao insertRecord:src];
+    
+    XCTAssertEqual(n, 1);
+    
+    BasicValueObject *dest = [self.dao selectRecord];
+    
+    XCTAssertEqualObjects(src.identity, dest.identity);
+    XCTAssertEqual(src.booleanValue, dest.booleanValue);
+    XCTAssertEqual(src.number, dest.number);
+    XCTAssertEqual(src.decimal, dest.decimal);
+    XCTAssertEqualObjects(src.text, dest.text);
+    XCTAssertEqualObjects(src.date, dest.date);
+}
+-(void)test06 {
+    BasicValueObject *dest = [self.dao selectUnicodeRecord];
+    XCTAssertEqualObjects(dest.text, @"好好学习，天天向上!");
 }
 @end

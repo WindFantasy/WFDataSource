@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/6.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSDaoManager+Internal.h"
@@ -81,9 +80,9 @@
     }
     return self;
 }
--(id)instantiateDaoWithConnection:(WFDSConnection *)connection script:(NSString *)script protocol:(Protocol *)protocol{
+-(id)instantiateDaoWithConnection:(WFDSConnection *)connection script:(NSString *)scriptName protocol:(Protocol *)protocol{
     NSBundle *bundle = [NSBundle mainBundle];
-    NSURL *url = [bundle URLForResource:script withExtension:@"dao.xml"];
+    NSURL *url = [bundle URLForResource:scriptName withExtension:@"dao.xml"];
     return [self instantiateDaoWithConnection:connection scriptURL:url protocol:protocol];
 }
 -(id)instantiateDaoWithConnection:(WFDSConnection *)connection scriptURL:(NSURL *)url protocol:(Protocol *)protocol{

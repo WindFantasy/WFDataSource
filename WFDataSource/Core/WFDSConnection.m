@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/5.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSConnection+Internal.h"
@@ -25,7 +24,7 @@
     NSString *thePath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     thePath = [thePath stringByAppendingPathComponent:path];
     wfds_info(@"Opening source: %@ ...", thePath);
-    return [[WFDSConnection alloc] initWithPath:path];
+    return [[WFDSConnection alloc] initWithPath:thePath];
 }
 +(instancetype)connectionForMemorySource{
     wfds_info(@"Opening in-memory source ...");
@@ -74,5 +73,15 @@
 }
 -(void)processSQLStreamInMainBundle{
     [WFDSStreamProcessor.sharedProcessor connection:self processBatchInBundle:nil];
+}
+- (void)performTransaction:(void (^)(void))execution{
+    @try {
+        [self begin];
+        execution();
+        [self commit];
+    } @catch (NSException *exception) {
+        [self rollback];
+        @throw exception;
+    }
 }
 @end

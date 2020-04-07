@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/9.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import "WFDSStatement.h"
@@ -11,7 +10,7 @@
 #import "WFDSConnection.h"
 
 @interface WFDSConnection()
-@property (nonatomic, readonly) sqlite3 *sqlite;
+@property (nonatomic, readonly, assign) sqlite3 *sqlite;
 @end
 
 @interface WFDSStatement()
@@ -54,7 +53,7 @@
 /// @returns YES if the execution is about a query statement.
 -(BOOL)execute{
     int count = sqlite3_column_count(_stmt);
-    if (count == 0) {   //non-query statement
+    if (count == 0) {   // non-query statement
         int r = sqlite3_step(_stmt);
         if (r != SQLITE_DONE) {
             @throw wfds_exceptionA(self, @"Execution failed.");

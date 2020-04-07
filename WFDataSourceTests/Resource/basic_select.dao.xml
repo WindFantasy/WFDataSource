@@ -3,6 +3,9 @@
     <select selector="selectHelloWorld"><![CDATA[
         SELECT 'Hello World'
     ]]></select>
+    <select selector="selectUnicode"><![CDATA[
+        SELECT '好好学习，天天向上!'
+    ]]></select>
     <select selector="selectNumber"><![CDATA[
         SELECT 1024
     ]]></select>

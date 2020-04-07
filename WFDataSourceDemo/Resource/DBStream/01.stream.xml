@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<execute>
+    <statement><![CDATA[
+        CREATE TABLE employee (
+        eid TEXT PRIMARY KEY,
+        
+        first_name TEXT,
+        last_name TEXT,
+        dob DATETIME,
+        gender INTEGER,
+        
+        position TEXT,
+        salary FLOAT
+        );
+    ]]></statement>
+    <statement><![CDATA[
+        CREATE TABLE project (
+        pid TEXT PRIMARY KEY,
+        
+        name TEXT,
+        desc TEXT,
+        
+        buget FLOAT,
+        status TEXT,
+        priority INTEGER
+        );
+    ]]></statement>
+    
+    <statement><![CDATA[
+        CREATE TABLE membership (
+        pid TEXT,
+        eid TEXT,
+        
+        PRIMARY KEY (pid, eid),
+        FOREIGN KEY (eid) REFERENCES employee (eid),
+        FOREIGN KEY (pid) REFERENCES project (pid)
+        );
+    ]]></statement>
+</execute>

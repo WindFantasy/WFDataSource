@@ -3,7 +3,6 @@
 //  WFDataSource
 //
 //  Created by Jerry on 2019/12/25.
-//  Copyright © 2019 Wind Fant. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -19,7 +18,7 @@ typedef NS_ENUM(NSUInteger, WFPropertyType) {
 };
 
 @interface WFDSColumn : NSObject
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) int index;
 @property (nonatomic, assign) WFPropertyType type;
 @end

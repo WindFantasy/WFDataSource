@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao>
+    <insert selector="insert:" table="project"/>
+    
+    <update selector="update:" table="project"
+    exclude="pid"
+    where="pid=:pid"/>
+    
+    <select selector="selectLatestPid"><![CDATA[
+        SELECT pid FROM project
+        ORDER BY pid DESC
+        LIMIT 0, 1
+    ]]></select>
+    
+    <select selector="selectAll" type="ProjectEntity"><![CDATA[
+        SELECT * FROM project
+    ]]></select>
+    
+    <select selector="selectProjectsWithEid:" type="ProjectEntity"><![CDATA[
+        SELECT * FROM membership m
+        LEFT JOIN project p ON p.pid=m.pid
+        WHERE m.eid=?
+    ]]></select>
+</dao>
+

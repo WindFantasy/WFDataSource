@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao>
+    <insert selector="insertRecord:"><![CDATA[
+        INSERT INTO my_table (identity, boolean_value, number, decimal, text, date)
+        VALUES (:identity, :booleanValue, :number, :decimal, :text, :date)
+    ]]></insert>
+    
+    <insert selector="insertRecordShortcut:" trace="true" table="my_table"
+        exclude="identity"/>
+    
+    <insert selector="insertRecordShortcut2:" table="my_table"
+        exclude="boolean_value, number, decimal, text, date"/>
+    
+    <delete selector="deleteRecord:"><![CDATA[
+        DELETE FROM my_table
+        WHERE identity=?
+    ]]></delete>
+    
+    <update selector="updateRecord:"><![CDATA[
+        UPDATE my_table
+        SET boolean_value=:booleanValue, number=:number, decimal=:decimal, text=:text, date=:date
+        WHERE identity=:identity
+    ]]></update>
+    <update selector="updateRecordShortcut:" table="my_table"
+        exclude="identity"
+        where="identity=:identity"/>
+    
+    <select selector="selectRecord" type="@BasicValueObject"><![CDATA[
+        SELECT * FROM my_table
+        LIMIT 0, 1
+    ]]></select>
+    
+    <select selector="selectRecords" type="BasicValueObject"><![CDATA[
+        SELECT * FROM my_table
+        ORDER BY identity ASC
+    ]]></select>
+</dao>

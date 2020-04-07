@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao>
+    <insert selector="insertData:">
+        INSERT INTO my_data ()
+        VALUES ()
+    </insert>
+</dao>

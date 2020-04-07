@@ -1,0 +1,983 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C41E0E1E23BD8238001D65B1 /* WFDSEntityHints+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C41E0E1923BD8238001D65B1 /* WFDSEntityHints+Internal.h */; };
+		C41E0E1F23BD8238001D65B1 /* WFDSEntityHints.h in Headers */ = {isa = PBXBuildFile; fileRef = C41E0E1A23BD8238001D65B1 /* WFDSEntityHints.h */; };
+		C41E0E2023BD8238001D65B1 /* WFDSEntityHints.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E0E1B23BD8238001D65B1 /* WFDSEntityHints.m */; };
+		C41E0E2423BD82F8001D65B1 /* WFDSConnection+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C41E0E2323BD82F8001D65B1 /* WFDSConnection+Internal.h */; };
+		C425C58E239A2D7F0007FB26 /* WFXValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C58D239A2D7F0007FB26 /* WFXValidator.h */; };
+		C425C5B2239A3B060007FB26 /* WFXChoiceBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C425C5AC239A3B050007FB26 /* WFXChoiceBuilder.m */; };
+		C425C5B5239A3B060007FB26 /* WFXChoiceBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5AF239A3B050007FB26 /* WFXChoiceBuilder.h */; };
+		C425C5B6239A3B060007FB26 /* WFXBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C425C5B0239A3B050007FB26 /* WFXBuilder.m */; };
+		C425C5B7239A3B060007FB26 /* WFXBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5B1239A3B050007FB26 /* WFXBuilder.h */; };
+		C425C5BA239A3B360007FB26 /* WFXElementValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5B8239A3B360007FB26 /* WFXElementValidator.h */; };
+		C425C5BB239A3B360007FB26 /* WFXElementValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C425C5B9239A3B360007FB26 /* WFXElementValidator.m */; };
+		C425C5BE239A3E260007FB26 /* WFXOccurrence.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5BC239A3E260007FB26 /* WFXOccurrence.h */; };
+		C425C5BF239A3E260007FB26 /* WFXOccurrence.m in Sources */ = {isa = PBXBuildFile; fileRef = C425C5BD239A3E260007FB26 /* WFXOccurrence.m */; };
+		C425C5C2239A4DDA0007FB26 /* WFXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5C0239A4DDA0007FB26 /* WFXmlParser.h */; };
+		C425C5C3239A4DDA0007FB26 /* WFXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C425C5C1239A4DDA0007FB26 /* WFXmlParser.m */; };
+		C425C5C9239A60630007FB26 /* WFXElement.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5C8239A60630007FB26 /* WFXElement.h */; };
+		C425C5CC239A60840007FB26 /* WFXGeneralElement.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5CA239A60840007FB26 /* WFXGeneralElement.h */; };
+		C425C5CD239A60840007FB26 /* WFXGeneralElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C425C5CB239A60840007FB26 /* WFXGeneralElement.m */; };
+		C425C5D0239BF3190007FB26 /* WFXDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = C425C5CE239BF3190007FB26 /* WFXDocument.h */; };
+		C425C5D1239BF3190007FB26 /* WFXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C425C5CF239BF3190007FB26 /* WFXDocument.m */; };
+		C43580B623C15D630088CBA5 /* WFDSStreamProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C43580B423C15D630088CBA5 /* WFDSStreamProcessor.m */; };
+		C43580B823C1B4B80088CBA5 /* DaoAdditionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43580B723C1B4B80088CBA5 /* DaoAdditionalTests.m */; };
+		C43580BA23C1CA530088CBA5 /* dao_additional.dao.xml in Resources */ = {isa = PBXBuildFile; fileRef = C43580B923C1CA530088CBA5 /* dao_additional.dao.xml */; };
+		C43580BE23C1D8040088CBA5 /* ValueObjectA.m in Sources */ = {isa = PBXBuildFile; fileRef = C43580BD23C1D8040088CBA5 /* ValueObjectA.m */; };
+		C43580C023C1DE700088CBA5 /* CoreAdditionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43580BF23C1DE700088CBA5 /* CoreAdditionalTests.m */; };
+		C43580C223C1E3FC0088CBA5 /* dao_additional2.dao.xml in Resources */ = {isa = PBXBuildFile; fileRef = C43580C123C1E3FC0088CBA5 /* dao_additional2.dao.xml */; };
+		C43F67FB23ADC1FC00758B7F /* basic_select.dao.xml in Resources */ = {isa = PBXBuildFile; fileRef = C43F67FA23ADC1FC00758B7F /* basic_select.dao.xml */; };
+		C45286F323BED0C1000D7376 /* BasicUpdateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C45286F223BED0C1000D7376 /* BasicUpdateTests.m */; };
+		C45286F523BED1B3000D7376 /* WFDSDaoManager+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C45286F423BED1B3000D7376 /* WFDSDaoManager+Internal.h */; };
+		C468191D23BED39000EAC861 /* basic_update.dao.xml in Resources */ = {isa = PBXBuildFile; fileRef = C468191C23BED39000EAC861 /* basic_update.dao.xml */; };
+		C468192523BED4EF00EAC861 /* BasicValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C468192423BED4EF00EAC861 /* BasicValueObject.m */; };
+		C468192F23BEDDBE00EAC861 /* WFDSSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = C468192723BEDDBE00EAC861 /* WFDSSelect.m */; };
+		C468193023BEDDBE00EAC861 /* WFDSOperationDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = C468192823BEDDBE00EAC861 /* WFDSOperationDefinition.m */; };
+		C468193223BEDDBE00EAC861 /* WFDSInsert.h in Headers */ = {isa = PBXBuildFile; fileRef = C468192A23BEDDBE00EAC861 /* WFDSInsert.h */; };
+		C468193323BEDDBE00EAC861 /* WFDSSelect.h in Headers */ = {isa = PBXBuildFile; fileRef = C468192B23BEDDBE00EAC861 /* WFDSSelect.h */; };
+		C468193523BEDDBE00EAC861 /* WFDSOperationDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = C468192D23BEDDBE00EAC861 /* WFDSOperationDefinition.h */; };
+		C468193623BEDDBE00EAC861 /* WFDSInsert.m in Sources */ = {isa = PBXBuildFile; fileRef = C468192E23BEDDBE00EAC861 /* WFDSInsert.m */; };
+		C468193D23BF44EA00EAC861 /* WFDSUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = C468193B23BF44EA00EAC861 /* WFDSUpdate.h */; };
+		C468193E23BF44EA00EAC861 /* WFDSUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = C468193C23BF44EA00EAC861 /* WFDSUpdate.m */; };
+		C468194123BF481A00EAC861 /* WFDSDelete.h in Headers */ = {isa = PBXBuildFile; fileRef = C468193F23BF481A00EAC861 /* WFDSDelete.h */; };
+		C468194223BF481A00EAC861 /* WFDSDelete.m in Sources */ = {isa = PBXBuildFile; fileRef = C468194023BF481A00EAC861 /* WFDSDelete.m */; };
+		C468194423BFE8E200EAC861 /* WFXmlParser+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C468194323BFE8E200EAC861 /* WFXmlParser+Internal.h */; };
+		C468194723BFECBD00EAC861 /* wfxsd.h in Headers */ = {isa = PBXBuildFile; fileRef = C468194523BFECBD00EAC861 /* wfxsd.h */; };
+		C468194823BFECBD00EAC861 /* wfxsd.m in Sources */ = {isa = PBXBuildFile; fileRef = C468194623BFECBD00EAC861 /* wfxsd.m */; };
+		C468194B23BFF26300EAC861 /* wfdao.h in Headers */ = {isa = PBXBuildFile; fileRef = C468194923BFF26300EAC861 /* wfdao.h */; };
+		C468194C23BFF26300EAC861 /* wfdao.m in Sources */ = {isa = PBXBuildFile; fileRef = C468194A23BFF26300EAC861 /* wfdao.m */; };
+		C468194F23C1461300EAC861 /* WFDSColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = C468194D23C1461300EAC861 /* WFDSColumn.m */; };
+		C468195023C1461300EAC861 /* WFDSColumn.h in Headers */ = {isa = PBXBuildFile; fileRef = C468194E23C1461300EAC861 /* WFDSColumn.h */; };
+		C4A88B2723C14B11006205F5 /* WFDSOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A88B2423C14B11006205F5 /* WFDSOperation.h */; };
+		C4A88B2823C14B11006205F5 /* WFDSOperation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A88B2523C14B11006205F5 /* WFDSOperation+Internal.h */; };
+		C4A88B2923C14B11006205F5 /* WFDSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A88B2623C14B11006205F5 /* WFDSOperation.m */; };
+		C4C108E523AE1B0D001654C4 /* WFXAttributeValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C108E323AE1B0D001654C4 /* WFXAttributeValidator.h */; };
+		C4C108E623AE1B0D001654C4 /* WFXAttributeValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C108E423AE1B0D001654C4 /* WFXAttributeValidator.m */; };
+		C4C108E923AE482F001654C4 /* WFDSDataAccessObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C108E723AE482F001654C4 /* WFDSDataAccessObject.h */; };
+		C4C108EA23AE482F001654C4 /* WFDSDataAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C108E823AE482F001654C4 /* WFDSDataAccessObject.m */; };
+		C4C108F023AE4C8A001654C4 /* WFDSScriptAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C108EF23AE4C8A001654C4 /* WFDSScriptAccess.h */; };
+		C4D1E749239D598800E9E9CA /* WFDSStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D1E747239D598800E9E9CA /* WFDSStatement.h */; };
+		C4D1E74A239D598800E9E9CA /* WFDSStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D1E748239D598800E9E9CA /* WFDSStatement.m */; };
+		C4D1E74D239D67B300E9E9CA /* WFDSResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D1E74B239D67B300E9E9CA /* WFDSResultSet.h */; };
+		C4D1E74E239D67B300E9E9CA /* WFDSResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D1E74C239D67B300E9E9CA /* WFDSResultSet.m */; };
+		C4F34C41239903FE00D906F9 /* WFDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F34C37239903FE00D906F9 /* WFDataSource.framework */; };
+		C4F34C46239903FE00D906F9 /* BasicSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34C45239903FE00D906F9 /* BasicSelectTests.m */; };
+		C4F34C48239903FE00D906F9 /* WFDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F34C3A239903FE00D906F9 /* WFDataSource.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F34C542399058E00D906F9 /* WFDSConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F34C522399058E00D906F9 /* WFDSConnection.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F34C552399058E00D906F9 /* WFDSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34C532399058E00D906F9 /* WFDSConnection.m */; };
+		C4F34C5E2399062B00D906F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34C5D2399062B00D906F9 /* AppDelegate.m */; };
+		C4F34C612399062B00D906F9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34C602399062B00D906F9 /* SceneDelegate.m */; };
+		C4F34C642399062B00D906F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34C632399062B00D906F9 /* ViewController.m */; };
+		C4F34C672399062B00D906F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F34C652399062B00D906F9 /* Main.storyboard */; };
+		C4F34C692399062F00D906F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F34C682399062F00D906F9 /* Assets.xcassets */; };
+		C4F34C6C2399062F00D906F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F34C6A2399062F00D906F9 /* LaunchScreen.storyboard */; };
+		C4F34C6F2399062F00D906F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34C6E2399062F00D906F9 /* main.m */; };
+		C4F34C902399072700D906F9 /* WFDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F34C37239903FE00D906F9 /* WFDataSource.framework */; };
+		C4F34C912399072700D906F9 /* WFDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4F34C37239903FE00D906F9 /* WFDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4F34C9B23990A2000D906F9 /* wfds.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F34C9923990A2000D906F9 /* wfds.h */; };
+		C4F34C9C23990A2000D906F9 /* wfds.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34C9A23990A2000D906F9 /* wfds.m */; };
+		C4F34C9E23990C4A00D906F9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F34C9D23990C4A00D906F9 /* libsqlite3.0.tbd */; };
+		C4F34CA22399F82900D906F9 /* WFDSDaoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F34CA02399F82900D906F9 /* WFDSDaoManager.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F34CA32399F82900D906F9 /* WFDSDaoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F34CA12399F82900D906F9 /* WFDSDaoManager.m */; };
+		C4F34CA52399FCAE00D906F9 /* Test.dao.xml in Resources */ = {isa = PBXBuildFile; fileRef = C4F34CA42399FCAE00D906F9 /* Test.dao.xml */; };
+		C4F34CAF239A030E00D906F9 /* 01.stream.xml in Resources */ = {isa = PBXBuildFile; fileRef = C4F34CAE239A030E00D906F9 /* 01.stream.xml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4F34C42239903FE00D906F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4F34C2E239903FE00D906F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4F34C36239903FE00D906F9;
+			remoteInfo = WFDataSource;
+		};
+		C4F34C922399072700D906F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4F34C2E239903FE00D906F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4F34C36239903FE00D906F9;
+			remoteInfo = WFDataSource;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C4F34C942399072700D906F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C4F34C912399072700D906F9 /* WFDataSource.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C41E0E1923BD8238001D65B1 /* WFDSEntityHints+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WFDSEntityHints+Internal.h"; sourceTree = "<group>"; };
+		C41E0E1A23BD8238001D65B1 /* WFDSEntityHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDSEntityHints.h; sourceTree = "<group>"; };
+		C41E0E1B23BD8238001D65B1 /* WFDSEntityHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDSEntityHints.m; sourceTree = "<group>"; };
+		C41E0E2323BD82F8001D65B1 /* WFDSConnection+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WFDSConnection+Internal.h"; sourceTree = "<group>"; };
+		C425C58D239A2D7F0007FB26 /* WFXValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXValidator.h; sourceTree = "<group>"; };
+		C425C5AC239A3B050007FB26 /* WFXChoiceBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFXChoiceBuilder.m; sourceTree = "<group>"; };
+		C425C5AF239A3B050007FB26 /* WFXChoiceBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFXChoiceBuilder.h; sourceTree = "<group>"; };
+		C425C5B0239A3B050007FB26 /* WFXBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFXBuilder.m; sourceTree = "<group>"; };
+		C425C5B1239A3B050007FB26 /* WFXBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFXBuilder.h; sourceTree = "<group>"; };
+		C425C5B8239A3B360007FB26 /* WFXElementValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXElementValidator.h; sourceTree = "<group>"; };
+		C425C5B9239A3B360007FB26 /* WFXElementValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFXElementValidator.m; sourceTree = "<group>"; };
+		C425C5BC239A3E260007FB26 /* WFXOccurrence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXOccurrence.h; sourceTree = "<group>"; };
+		C425C5BD239A3E260007FB26 /* WFXOccurrence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFXOccurrence.m; sourceTree = "<group>"; };
+		C425C5C0239A4DDA0007FB26 /* WFXmlParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXmlParser.h; sourceTree = "<group>"; };
+		C425C5C1239A4DDA0007FB26 /* WFXmlParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFXmlParser.m; sourceTree = "<group>"; };
+		C425C5C8239A60630007FB26 /* WFXElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXElement.h; sourceTree = "<group>"; };
+		C425C5CA239A60840007FB26 /* WFXGeneralElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXGeneralElement.h; sourceTree = "<group>"; };
+		C425C5CB239A60840007FB26 /* WFXGeneralElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFXGeneralElement.m; sourceTree = "<group>"; };
+		C425C5CE239BF3190007FB26 /* WFXDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXDocument.h; sourceTree = "<group>"; };
+		C425C5CF239BF3190007FB26 /* WFXDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFXDocument.m; sourceTree = "<group>"; };
+		C43580B323C15D630088CBA5 /* WFDSStreamProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDSStreamProcessor.h; sourceTree = "<group>"; };
+		C43580B423C15D630088CBA5 /* WFDSStreamProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDSStreamProcessor.m; sourceTree = "<group>"; };
+		C43580B723C1B4B80088CBA5 /* DaoAdditionalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaoAdditionalTests.m; sourceTree = "<group>"; };
+		C43580B923C1CA530088CBA5 /* dao_additional.dao.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = dao_additional.dao.xml; sourceTree = "<group>"; };
+		C43580BB23C1CAA50088CBA5 /* DaoAdditionalDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaoAdditionalDao.h; sourceTree = "<group>"; };
+		C43580BC23C1D8040088CBA5 /* ValueObjectA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValueObjectA.h; sourceTree = "<group>"; };
+		C43580BD23C1D8040088CBA5 /* ValueObjectA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValueObjectA.m; sourceTree = "<group>"; };
+		C43580BF23C1DE700088CBA5 /* CoreAdditionalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAdditionalTests.m; sourceTree = "<group>"; };
+		C43580C123C1E3FC0088CBA5 /* dao_additional2.dao.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = dao_additional2.dao.xml; sourceTree = "<group>"; };
+		C43F67FA23ADC1FC00758B7F /* basic_select.dao.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = basic_select.dao.xml; sourceTree = "<group>"; };
+		C45286F223BED0C1000D7376 /* BasicUpdateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicUpdateTests.m; sourceTree = "<group>"; };
+		C45286F423BED1B3000D7376 /* WFDSDaoManager+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WFDSDaoManager+Internal.h"; sourceTree = "<group>"; };
+		C468191C23BED39000EAC861 /* basic_update.dao.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = basic_update.dao.xml; sourceTree = "<group>"; };
+		C468192023BED4EF00EAC861 /* BasicSelectDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSelectDao.h; sourceTree = "<group>"; };
+		C468192123BED4EF00EAC861 /* BasicUpdateDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicUpdateDao.h; sourceTree = "<group>"; };
+		C468192323BED4EF00EAC861 /* BasicValueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicValueObject.h; sourceTree = "<group>"; };
+		C468192423BED4EF00EAC861 /* BasicValueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicValueObject.m; sourceTree = "<group>"; };
+		C468192723BEDDBE00EAC861 /* WFDSSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDSSelect.m; sourceTree = "<group>"; };
+		C468192823BEDDBE00EAC861 /* WFDSOperationDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDSOperationDefinition.m; sourceTree = "<group>"; };
+		C468192A23BEDDBE00EAC861 /* WFDSInsert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDSInsert.h; sourceTree = "<group>"; };
+		C468192B23BEDDBE00EAC861 /* WFDSSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDSSelect.h; sourceTree = "<group>"; };
+		C468192D23BEDDBE00EAC861 /* WFDSOperationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDSOperationDefinition.h; sourceTree = "<group>"; };
+		C468192E23BEDDBE00EAC861 /* WFDSInsert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDSInsert.m; sourceTree = "<group>"; };
+		C468193B23BF44EA00EAC861 /* WFDSUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSUpdate.h; sourceTree = "<group>"; };
+		C468193C23BF44EA00EAC861 /* WFDSUpdate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFDSUpdate.m; sourceTree = "<group>"; };
+		C468193F23BF481A00EAC861 /* WFDSDelete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSDelete.h; sourceTree = "<group>"; };
+		C468194023BF481A00EAC861 /* WFDSDelete.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFDSDelete.m; sourceTree = "<group>"; };
+		C468194323BFE8E200EAC861 /* WFXmlParser+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WFXmlParser+Internal.h"; sourceTree = "<group>"; };
+		C468194523BFECBD00EAC861 /* wfxsd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wfxsd.h; sourceTree = "<group>"; };
+		C468194623BFECBD00EAC861 /* wfxsd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wfxsd.m; sourceTree = "<group>"; };
+		C468194923BFF26300EAC861 /* wfdao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wfdao.h; sourceTree = "<group>"; };
+		C468194A23BFF26300EAC861 /* wfdao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wfdao.m; sourceTree = "<group>"; };
+		C468194D23C1461300EAC861 /* WFDSColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDSColumn.m; sourceTree = "<group>"; };
+		C468194E23C1461300EAC861 /* WFDSColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDSColumn.h; sourceTree = "<group>"; };
+		C4A88B2423C14B11006205F5 /* WFDSOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDSOperation.h; sourceTree = "<group>"; };
+		C4A88B2523C14B11006205F5 /* WFDSOperation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WFDSOperation+Internal.h"; sourceTree = "<group>"; };
+		C4A88B2623C14B11006205F5 /* WFDSOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDSOperation.m; sourceTree = "<group>"; };
+		C4C108E323AE1B0D001654C4 /* WFXAttributeValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFXAttributeValidator.h; sourceTree = "<group>"; };
+		C4C108E423AE1B0D001654C4 /* WFXAttributeValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFXAttributeValidator.m; sourceTree = "<group>"; };
+		C4C108E723AE482F001654C4 /* WFDSDataAccessObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSDataAccessObject.h; sourceTree = "<group>"; };
+		C4C108E823AE482F001654C4 /* WFDSDataAccessObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFDSDataAccessObject.m; sourceTree = "<group>"; };
+		C4C108EF23AE4C8A001654C4 /* WFDSScriptAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSScriptAccess.h; sourceTree = "<group>"; };
+		C4D1E747239D598800E9E9CA /* WFDSStatement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSStatement.h; sourceTree = "<group>"; };
+		C4D1E748239D598800E9E9CA /* WFDSStatement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFDSStatement.m; sourceTree = "<group>"; };
+		C4D1E74B239D67B300E9E9CA /* WFDSResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSResultSet.h; sourceTree = "<group>"; };
+		C4D1E74C239D67B300E9E9CA /* WFDSResultSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFDSResultSet.m; sourceTree = "<group>"; };
+		C4F34C37239903FE00D906F9 /* WFDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WFDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4F34C3A239903FE00D906F9 /* WFDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDataSource.h; sourceTree = "<group>"; };
+		C4F34C3B239903FE00D906F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F34C40239903FE00D906F9 /* WFDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WFDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4F34C45239903FE00D906F9 /* BasicSelectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicSelectTests.m; sourceTree = "<group>"; };
+		C4F34C47239903FE00D906F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F34C522399058E00D906F9 /* WFDSConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSConnection.h; sourceTree = "<group>"; };
+		C4F34C532399058E00D906F9 /* WFDSConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFDSConnection.m; sourceTree = "<group>"; };
+		C4F34C5A2399062B00D906F9 /* WFDataSourceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFDataSourceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4F34C5C2399062B00D906F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C4F34C5D2399062B00D906F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C4F34C5F2399062B00D906F9 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C4F34C602399062B00D906F9 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C4F34C622399062B00D906F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C4F34C632399062B00D906F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C4F34C662399062B00D906F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4F34C682399062F00D906F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4F34C6B2399062F00D906F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4F34C6D2399062F00D906F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F34C6E2399062F00D906F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4F34C9923990A2000D906F9 /* wfds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wfds.h; sourceTree = "<group>"; };
+		C4F34C9A23990A2000D906F9 /* wfds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wfds.m; sourceTree = "<group>"; };
+		C4F34C9D23990C4A00D906F9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
+		C4F34CA02399F82900D906F9 /* WFDSDaoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFDSDaoManager.h; sourceTree = "<group>"; };
+		C4F34CA12399F82900D906F9 /* WFDSDaoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFDSDaoManager.m; sourceTree = "<group>"; };
+		C4F34CA42399FCAE00D906F9 /* Test.dao.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Test.dao.xml; sourceTree = "<group>"; };
+		C4F34CAE239A030E00D906F9 /* 01.stream.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = 01.stream.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4F34C34239903FE00D906F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F34C9E23990C4A00D906F9 /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F34C3D239903FE00D906F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F34C41239903FE00D906F9 /* WFDataSource.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F34C572399062B00D906F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F34C902399072700D906F9 /* WFDataSource.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C425C580239A29C40007FB26 /* Xml */ = {
+			isa = PBXGroup;
+			children = (
+				C4C108E323AE1B0D001654C4 /* WFXAttributeValidator.h */,
+				C4C108E423AE1B0D001654C4 /* WFXAttributeValidator.m */,
+				C425C5B1239A3B050007FB26 /* WFXBuilder.h */,
+				C425C5B0239A3B050007FB26 /* WFXBuilder.m */,
+				C425C5AF239A3B050007FB26 /* WFXChoiceBuilder.h */,
+				C425C5AC239A3B050007FB26 /* WFXChoiceBuilder.m */,
+				C425C5CE239BF3190007FB26 /* WFXDocument.h */,
+				C425C5CF239BF3190007FB26 /* WFXDocument.m */,
+				C425C5C8239A60630007FB26 /* WFXElement.h */,
+				C425C5B8239A3B360007FB26 /* WFXElementValidator.h */,
+				C425C5B9239A3B360007FB26 /* WFXElementValidator.m */,
+				C425C5CA239A60840007FB26 /* WFXGeneralElement.h */,
+				C425C5CB239A60840007FB26 /* WFXGeneralElement.m */,
+				C425C5C0239A4DDA0007FB26 /* WFXmlParser.h */,
+				C425C5C1239A4DDA0007FB26 /* WFXmlParser.m */,
+				C468194323BFE8E200EAC861 /* WFXmlParser+Internal.h */,
+				C425C5BC239A3E260007FB26 /* WFXOccurrence.h */,
+				C425C5BD239A3E260007FB26 /* WFXOccurrence.m */,
+				C425C58D239A2D7F0007FB26 /* WFXValidator.h */,
+				C468194523BFECBD00EAC861 /* wfxsd.h */,
+				C468194623BFECBD00EAC861 /* wfxsd.m */,
+			);
+			path = Xml;
+			sourceTree = "<group>";
+		};
+		C468191F23BED4EF00EAC861 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				C468192023BED4EF00EAC861 /* BasicSelectDao.h */,
+				C468192123BED4EF00EAC861 /* BasicUpdateDao.h */,
+				C43580BB23C1CAA50088CBA5 /* DaoAdditionalDao.h */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		C468192223BED4EF00EAC861 /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				C468192323BED4EF00EAC861 /* BasicValueObject.h */,
+				C468192423BED4EF00EAC861 /* BasicValueObject.m */,
+				C43580BC23C1D8040088CBA5 /* ValueObjectA.h */,
+				C43580BD23C1D8040088CBA5 /* ValueObjectA.m */,
+			);
+			path = VO;
+			sourceTree = "<group>";
+		};
+		C468192623BEDDBE00EAC861 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				C468193F23BF481A00EAC861 /* WFDSDelete.h */,
+				C468194023BF481A00EAC861 /* WFDSDelete.m */,
+				C468192A23BEDDBE00EAC861 /* WFDSInsert.h */,
+				C468192E23BEDDBE00EAC861 /* WFDSInsert.m */,
+				C4A88B2423C14B11006205F5 /* WFDSOperation.h */,
+				C4A88B2623C14B11006205F5 /* WFDSOperation.m */,
+				C4A88B2523C14B11006205F5 /* WFDSOperation+Internal.h */,
+				C468192D23BEDDBE00EAC861 /* WFDSOperationDefinition.h */,
+				C468192823BEDDBE00EAC861 /* WFDSOperationDefinition.m */,
+				C468192B23BEDDBE00EAC861 /* WFDSSelect.h */,
+				C468192723BEDDBE00EAC861 /* WFDSSelect.m */,
+				C468193B23BF44EA00EAC861 /* WFDSUpdate.h */,
+				C468193C23BF44EA00EAC861 /* WFDSUpdate.m */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		C4F34C2D239903FE00D906F9 = {
+			isa = PBXGroup;
+			children = (
+				C4F34C39239903FE00D906F9 /* WFDataSource */,
+				C4F34C44239903FE00D906F9 /* WFDataSourceTests */,
+				C4F34C5B2399062B00D906F9 /* WFDataSourceDemo */,
+				C4F34C38239903FE00D906F9 /* Products */,
+				C4F34C8F2399072700D906F9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C4F34C38239903FE00D906F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4F34C37239903FE00D906F9 /* WFDataSource.framework */,
+				C4F34C40239903FE00D906F9 /* WFDataSourceTests.xctest */,
+				C4F34C5A2399062B00D906F9 /* WFDataSourceDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4F34C39239903FE00D906F9 /* WFDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C4F34C512399054C00D906F9 /* Core */,
+				C4F34C9F2399EEF200D906F9 /* Dao */,
+				C4F34C3B239903FE00D906F9 /* Info.plist */,
+				C4F34C3A239903FE00D906F9 /* WFDataSource.h */,
+				C425C580239A29C40007FB26 /* Xml */,
+			);
+			path = WFDataSource;
+			sourceTree = "<group>";
+		};
+		C4F34C44239903FE00D906F9 /* WFDataSourceTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4F34C45239903FE00D906F9 /* BasicSelectTests.m */,
+				C45286F223BED0C1000D7376 /* BasicUpdateTests.m */,
+				C43580BF23C1DE700088CBA5 /* CoreAdditionalTests.m */,
+				C43580B723C1B4B80088CBA5 /* DaoAdditionalTests.m */,
+				C4F34C47239903FE00D906F9 /* Info.plist */,
+				C468191F23BED4EF00EAC861 /* DAO */,
+				C4F34CAD239A02CE00D906F9 /* Resource */,
+				C468192223BED4EF00EAC861 /* VO */,
+			);
+			path = WFDataSourceTests;
+			sourceTree = "<group>";
+		};
+		C4F34C512399054C00D906F9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C4F34C9923990A2000D906F9 /* wfds.h */,
+				C4F34C9A23990A2000D906F9 /* wfds.m */,
+				C4F34C522399058E00D906F9 /* WFDSConnection.h */,
+				C4F34C532399058E00D906F9 /* WFDSConnection.m */,
+				C41E0E2323BD82F8001D65B1 /* WFDSConnection+Internal.h */,
+				C4D1E74B239D67B300E9E9CA /* WFDSResultSet.h */,
+				C4D1E74C239D67B300E9E9CA /* WFDSResultSet.m */,
+				C4D1E747239D598800E9E9CA /* WFDSStatement.h */,
+				C4D1E748239D598800E9E9CA /* WFDSStatement.m */,
+				C43580B323C15D630088CBA5 /* WFDSStreamProcessor.h */,
+				C43580B423C15D630088CBA5 /* WFDSStreamProcessor.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C4F34C5B2399062B00D906F9 /* WFDataSourceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C4F34C5C2399062B00D906F9 /* AppDelegate.h */,
+				C4F34C5D2399062B00D906F9 /* AppDelegate.m */,
+				C4F34C5F2399062B00D906F9 /* SceneDelegate.h */,
+				C4F34C602399062B00D906F9 /* SceneDelegate.m */,
+				C4F34C622399062B00D906F9 /* ViewController.h */,
+				C4F34C632399062B00D906F9 /* ViewController.m */,
+				C4F34C652399062B00D906F9 /* Main.storyboard */,
+				C4F34C682399062F00D906F9 /* Assets.xcassets */,
+				C4F34C6A2399062F00D906F9 /* LaunchScreen.storyboard */,
+				C4F34C6D2399062F00D906F9 /* Info.plist */,
+				C4F34C6E2399062F00D906F9 /* main.m */,
+				C4F34CA42399FCAE00D906F9 /* Test.dao.xml */,
+			);
+			path = WFDataSourceDemo;
+			sourceTree = "<group>";
+		};
+		C4F34C8F2399072700D906F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4F34C9D23990C4A00D906F9 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4F34C9F2399EEF200D906F9 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				C468192623BEDDBE00EAC861 /* Operation */,
+				C468194923BFF26300EAC861 /* wfdao.h */,
+				C468194A23BFF26300EAC861 /* wfdao.m */,
+				C468194E23C1461300EAC861 /* WFDSColumn.h */,
+				C468194D23C1461300EAC861 /* WFDSColumn.m */,
+				C4F34CA02399F82900D906F9 /* WFDSDaoManager.h */,
+				C4F34CA12399F82900D906F9 /* WFDSDaoManager.m */,
+				C45286F423BED1B3000D7376 /* WFDSDaoManager+Internal.h */,
+				C4C108E723AE482F001654C4 /* WFDSDataAccessObject.h */,
+				C4C108E823AE482F001654C4 /* WFDSDataAccessObject.m */,
+				C41E0E1A23BD8238001D65B1 /* WFDSEntityHints.h */,
+				C41E0E1B23BD8238001D65B1 /* WFDSEntityHints.m */,
+				C41E0E1923BD8238001D65B1 /* WFDSEntityHints+Internal.h */,
+				C4C108EF23AE4C8A001654C4 /* WFDSScriptAccess.h */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
+		C4F34CAD239A02CE00D906F9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C43580C123C1E3FC0088CBA5 /* dao_additional2.dao.xml */,
+				C43580B923C1CA530088CBA5 /* dao_additional.dao.xml */,
+				C4F34CAE239A030E00D906F9 /* 01.stream.xml */,
+				C43F67FA23ADC1FC00758B7F /* basic_select.dao.xml */,
+				C468191C23BED39000EAC861 /* basic_update.dao.xml */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C4F34C32239903FE00D906F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F34CA22399F82900D906F9 /* WFDSDaoManager.h in Headers */,
+				C41E0E2423BD82F8001D65B1 /* WFDSConnection+Internal.h in Headers */,
+				C468194B23BFF26300EAC861 /* wfdao.h in Headers */,
+				C4C108E523AE1B0D001654C4 /* WFXAttributeValidator.h in Headers */,
+				C425C5D0239BF3190007FB26 /* WFXDocument.h in Headers */,
+				C468193D23BF44EA00EAC861 /* WFDSUpdate.h in Headers */,
+				C425C5B7239A3B060007FB26 /* WFXBuilder.h in Headers */,
+				C45286F523BED1B3000D7376 /* WFDSDaoManager+Internal.h in Headers */,
+				C425C5C2239A4DDA0007FB26 /* WFXmlParser.h in Headers */,
+				C425C5CC239A60840007FB26 /* WFXGeneralElement.h in Headers */,
+				C4C108E923AE482F001654C4 /* WFDSDataAccessObject.h in Headers */,
+				C425C5B5239A3B060007FB26 /* WFXChoiceBuilder.h in Headers */,
+				C4D1E749239D598800E9E9CA /* WFDSStatement.h in Headers */,
+				C468194423BFE8E200EAC861 /* WFXmlParser+Internal.h in Headers */,
+				C4A88B2723C14B11006205F5 /* WFDSOperation.h in Headers */,
+				C425C58E239A2D7F0007FB26 /* WFXValidator.h in Headers */,
+				C425C5C9239A60630007FB26 /* WFXElement.h in Headers */,
+				C425C5BE239A3E260007FB26 /* WFXOccurrence.h in Headers */,
+				C468193323BEDDBE00EAC861 /* WFDSSelect.h in Headers */,
+				C425C5BA239A3B360007FB26 /* WFXElementValidator.h in Headers */,
+				C41E0E1F23BD8238001D65B1 /* WFDSEntityHints.h in Headers */,
+				C4D1E74D239D67B300E9E9CA /* WFDSResultSet.h in Headers */,
+				C468195023C1461300EAC861 /* WFDSColumn.h in Headers */,
+				C468193523BEDDBE00EAC861 /* WFDSOperationDefinition.h in Headers */,
+				C468194723BFECBD00EAC861 /* wfxsd.h in Headers */,
+				C4F34C48239903FE00D906F9 /* WFDataSource.h in Headers */,
+				C41E0E1E23BD8238001D65B1 /* WFDSEntityHints+Internal.h in Headers */,
+				C4F34C542399058E00D906F9 /* WFDSConnection.h in Headers */,
+				C468194123BF481A00EAC861 /* WFDSDelete.h in Headers */,
+				C4C108F023AE4C8A001654C4 /* WFDSScriptAccess.h in Headers */,
+				C4F34C9B23990A2000D906F9 /* wfds.h in Headers */,
+				C468193223BEDDBE00EAC861 /* WFDSInsert.h in Headers */,
+				C4A88B2823C14B11006205F5 /* WFDSOperation+Internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C4F34C36239903FE00D906F9 /* WFDataSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4F34C4B239903FE00D906F9 /* Build configuration list for PBXNativeTarget "WFDataSource" */;
+			buildPhases = (
+				C4F34C32239903FE00D906F9 /* Headers */,
+				C4F34C33239903FE00D906F9 /* Sources */,
+				C4F34C34239903FE00D906F9 /* Frameworks */,
+				C4F34C35239903FE00D906F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WFDataSource;
+			productName = WFDataSource;
+			productReference = C4F34C37239903FE00D906F9 /* WFDataSource.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C4F34C3F239903FE00D906F9 /* WFDataSourceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4F34C4E239903FE00D906F9 /* Build configuration list for PBXNativeTarget "WFDataSourceTests" */;
+			buildPhases = (
+				C4F34C3C239903FE00D906F9 /* Sources */,
+				C4F34C3D239903FE00D906F9 /* Frameworks */,
+				C4F34C3E239903FE00D906F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4F34C43239903FE00D906F9 /* PBXTargetDependency */,
+			);
+			name = WFDataSourceTests;
+			productName = WFDataSourceTests;
+			productReference = C4F34C40239903FE00D906F9 /* WFDataSourceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4F34C592399062B00D906F9 /* WFDataSourceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4F34C862399062F00D906F9 /* Build configuration list for PBXNativeTarget "WFDataSourceDemo" */;
+			buildPhases = (
+				C4F34C562399062B00D906F9 /* Sources */,
+				C4F34C572399062B00D906F9 /* Frameworks */,
+				C4F34C582399062B00D906F9 /* Resources */,
+				C4F34C942399072700D906F9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4F34C932399072700D906F9 /* PBXTargetDependency */,
+			);
+			name = WFDataSourceDemo;
+			productName = WFDataSourceDemo;
+			productReference = C4F34C5A2399062B00D906F9 /* WFDataSourceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4F34C2E239903FE00D906F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Wind Fant";
+				TargetAttributes = {
+					C4F34C36239903FE00D906F9 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					C4F34C3F239903FE00D906F9 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					C4F34C592399062B00D906F9 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C4F34C31239903FE00D906F9 /* Build configuration list for PBXProject "WFDataSource" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4F34C2D239903FE00D906F9;
+			productRefGroup = C4F34C38239903FE00D906F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4F34C36239903FE00D906F9 /* WFDataSource */,
+				C4F34C3F239903FE00D906F9 /* WFDataSourceTests */,
+				C4F34C592399062B00D906F9 /* WFDataSourceDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4F34C35239903FE00D906F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F34C3E239903FE00D906F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C468191D23BED39000EAC861 /* basic_update.dao.xml in Resources */,
+				C43580BA23C1CA530088CBA5 /* dao_additional.dao.xml in Resources */,
+				C43580C223C1E3FC0088CBA5 /* dao_additional2.dao.xml in Resources */,
+				C43F67FB23ADC1FC00758B7F /* basic_select.dao.xml in Resources */,
+				C4F34CAF239A030E00D906F9 /* 01.stream.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F34C582399062B00D906F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F34C6C2399062F00D906F9 /* LaunchScreen.storyboard in Resources */,
+				C4F34CA52399FCAE00D906F9 /* Test.dao.xml in Resources */,
+				C4F34C692399062F00D906F9 /* Assets.xcassets in Resources */,
+				C4F34C672399062B00D906F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4F34C33239903FE00D906F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C468193023BEDDBE00EAC861 /* WFDSOperationDefinition.m in Sources */,
+				C4C108E623AE1B0D001654C4 /* WFXAttributeValidator.m in Sources */,
+				C4F34C9C23990A2000D906F9 /* wfds.m in Sources */,
+				C425C5BB239A3B360007FB26 /* WFXElementValidator.m in Sources */,
+				C468194823BFECBD00EAC861 /* wfxsd.m in Sources */,
+				C4F34CA32399F82900D906F9 /* WFDSDaoManager.m in Sources */,
+				C4D1E74E239D67B300E9E9CA /* WFDSResultSet.m in Sources */,
+				C43580B623C15D630088CBA5 /* WFDSStreamProcessor.m in Sources */,
+				C425C5B6239A3B060007FB26 /* WFXBuilder.m in Sources */,
+				C4C108EA23AE482F001654C4 /* WFDSDataAccessObject.m in Sources */,
+				C425C5D1239BF3190007FB26 /* WFXDocument.m in Sources */,
+				C425C5B2239A3B060007FB26 /* WFXChoiceBuilder.m in Sources */,
+				C468194C23BFF26300EAC861 /* wfdao.m in Sources */,
+				C468193E23BF44EA00EAC861 /* WFDSUpdate.m in Sources */,
+				C425C5C3239A4DDA0007FB26 /* WFXmlParser.m in Sources */,
+				C468193623BEDDBE00EAC861 /* WFDSInsert.m in Sources */,
+				C425C5CD239A60840007FB26 /* WFXGeneralElement.m in Sources */,
+				C468194223BF481A00EAC861 /* WFDSDelete.m in Sources */,
+				C41E0E2023BD8238001D65B1 /* WFDSEntityHints.m in Sources */,
+				C468194F23C1461300EAC861 /* WFDSColumn.m in Sources */,
+				C4F34C552399058E00D906F9 /* WFDSConnection.m in Sources */,
+				C4D1E74A239D598800E9E9CA /* WFDSStatement.m in Sources */,
+				C4A88B2923C14B11006205F5 /* WFDSOperation.m in Sources */,
+				C468192F23BEDDBE00EAC861 /* WFDSSelect.m in Sources */,
+				C425C5BF239A3E260007FB26 /* WFXOccurrence.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F34C3C239903FE00D906F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43580BE23C1D8040088CBA5 /* ValueObjectA.m in Sources */,
+				C4F34C46239903FE00D906F9 /* BasicSelectTests.m in Sources */,
+				C45286F323BED0C1000D7376 /* BasicUpdateTests.m in Sources */,
+				C468192523BED4EF00EAC861 /* BasicValueObject.m in Sources */,
+				C43580B823C1B4B80088CBA5 /* DaoAdditionalTests.m in Sources */,
+				C43580C023C1DE700088CBA5 /* CoreAdditionalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F34C562399062B00D906F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F34C642399062B00D906F9 /* ViewController.m in Sources */,
+				C4F34C5E2399062B00D906F9 /* AppDelegate.m in Sources */,
+				C4F34C6F2399062F00D906F9 /* main.m in Sources */,
+				C4F34C612399062B00D906F9 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4F34C43239903FE00D906F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4F34C36239903FE00D906F9 /* WFDataSource */;
+			targetProxy = C4F34C42239903FE00D906F9 /* PBXContainerItemProxy */;
+		};
+		C4F34C932399072700D906F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4F34C36239903FE00D906F9 /* WFDataSource */;
+			targetProxy = C4F34C922399072700D906F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4F34C652399062B00D906F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4F34C662399062B00D906F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4F34C6A2399062F00D906F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4F34C6B2399062F00D906F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4F34C49239903FE00D906F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4F34C4A239903FE00D906F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4F34C4C239903FE00D906F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WFDataSource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windfant.WFDataSource;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4F34C4D239903FE00D906F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WFDataSource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windfant.WFDataSource;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4F34C4F239903FE00D906F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WFDataSourceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windfant.WFDataSourceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4F34C50239903FE00D906F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WFDataSourceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windfant.WFDataSourceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4F34C872399062F00D906F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76BTS9JH8H;
+				INFOPLIST_FILE = WFDataSourceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windfant.WFDataSourceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4F34C882399062F00D906F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76BTS9JH8H;
+				INFOPLIST_FILE = WFDataSourceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.windfant.WFDataSourceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4F34C31239903FE00D906F9 /* Build configuration list for PBXProject "WFDataSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F34C49239903FE00D906F9 /* Debug */,
+				C4F34C4A239903FE00D906F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4F34C4B239903FE00D906F9 /* Build configuration list for PBXNativeTarget "WFDataSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F34C4C239903FE00D906F9 /* Debug */,
+				C4F34C4D239903FE00D906F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4F34C4E239903FE00D906F9 /* Build configuration list for PBXNativeTarget "WFDataSourceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F34C4F239903FE00D906F9 /* Debug */,
+				C4F34C50239903FE00D906F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4F34C862399062F00D906F9 /* Build configuration list for PBXNativeTarget "WFDataSourceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F34C872399062F00D906F9 /* Debug */,
+				C4F34C882399062F00D906F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4F34C2E239903FE00D906F9 /* Project object */;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<execute>
+    <statement><![CDATA[
+        CREATE TABLE my_table
+        (
+            identity TEXT PRIMARY KEY,
+            boolean_value BOOL,
+            number INTEGER,
+            decimal FLOAT,
+            text TEXT,
+            date DATETIME
+        );
+    ]]></statement>
+</execute>

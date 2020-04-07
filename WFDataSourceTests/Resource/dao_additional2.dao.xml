@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao>
+    <select selector="selectRecord" type="@EntityNotExist"><![CDATA[
+        SELECT * FROM my_table
+    ]]></select>
+</dao>

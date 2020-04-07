@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao>
+    <select selector="selectHelloWorld"><![CDATA[
+        SELECT 'Hello World'
+    ]]></select>
+    <select selector="selectNumber"><![CDATA[
+        SELECT 1024
+    ]]></select>
+    <select selector="selectDecimal"><![CDATA[
+        SELECT 3.14
+    ]]></select>
+    <select selector="selectDate"><![CDATA[
+        SELECT 1000.1234
+    ]]></select>
+    <select selector="selectTrue"><![CDATA[
+        SELECT 1
+    ]]></select>
+
+    <select selector="selectRecord" type="@BasicValueObject"><![CDATA[
+        SELECT 1 boolean_value,
+            1024 number,
+            3.14 decimal,
+            'Hello World' text,
+            1000.1234 date
+    ]]></select>
+
+    <select selector="selectBoolean:"><![CDATA[
+        SELECT ?
+    ]]></select>
+    <select selector="selectNumber:"><![CDATA[
+        SELECT ?
+    ]]></select>
+    <select selector="selectDecimal:"><![CDATA[
+        SELECT ?
+    ]]></select>
+    <select selector="selectText:"><![CDATA[
+        SELECT ?
+    ]]></select>
+    <select selector="selectDate:"><![CDATA[
+        SELECT ?
+    ]]></select>
+
+    <select selector="selectRecord:" type="@BasicValueObject"><![CDATA[
+        SELECT :booleanValue boolean_value,
+            :number number,
+            :decimal decimal,
+            :text text,
+            :date date
+    ]]></select>
+
+    <select selector="selectRecordWithBoolean:number:decimal:text:date:" type="@BasicValueObject"><![CDATA[
+        SELECT ?1 boolean_value,
+            ?2 number,
+            ?3 decimal,
+            ?4 text,
+            ?5 date
+    ]]></select>
+
+    <!-- array -->
+    <select selector="selectRecords" type="BasicValueObject"><![CDATA[
+    SELECT 1 boolean_value,
+        1024 number,
+        3.14 decimal,
+        'Hello World' text,
+        1000.1234 date
+    ]]></select>
+</dao>

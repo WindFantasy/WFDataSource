@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao>
+    <insert selector="insertRecord:" table="my_table"
+        exclude="identity, boolean_value, number, decimal, text, date"/>
+        
+    <insert selector="insertRecordWithNumber:decimal:"><![CDATA[
+        INSERT INTO my_table (identity, boolean_value, number, decimal, text, date)
+        VALUES (:1, :2, :3, :4, :5, :6)
+    ]]></insert>
+    
+    <insert selector="insertRecord1:"><![CDATA[
+        INSERT INTO my_table (decimal)
+        VALUES (:decimal)
+    ]]></insert>
+    
+    <insert selector="insertRecord2:"><![CDATA[
+        INSERT INTO my_table (text)
+        VALUES (:text)
+    ]]></insert>
+
+    <insert selector="insertRecord3:" table="my_table"
+        exclude="identity, boolean_value, number, decimal, text, date"/>
+        
+    <!-- Should print something like: Protocol 'DaoAdditionalDao' has no selector named 'insertWithSelectorNotExistInProtocol'-->
+    <insert selector="insertWithSelectorNotExistInProtocol" table="my_table"
+        exclude="boolean_value, number, decimal, text, date"/>
+
+    <update selector="updateRecord:" table="my_table"
+        exclude="identity, boolean_value, number, decimal, text, date"/>
+    
+    <select selector="selectDecimal"><![CDATA[
+        SELECT 3.14
+    ]]></select>
+    
+    <select selector="selectDecimal:"><![CDATA[
+        SELECT ?
+    ]]></select>
+    
+    <select selector="selectNoRow"><![CDATA[
+        SELECT 'hello' FROM my_table
+        WHERE 1=0
+    ]]></select>
+    
+    <select selector="selectTooManyColumns"><![CDATA[
+        SELECT 'hello', 'world'
+    ]]></select>
+    
+    <select selector="selectEntityButNoRow" type="@BasicValueObject"><![CDATA[
+        SELECT * FROM my_table
+        WHERE 1=0
+    ]]></select>
+    
+    <select selector="selectColumnsWithRepeatedLabel" type="@BasicValueObject"><![CDATA[
+        SELECT 123 number, 231 number
+    ]]></select>
+    
+    <select selector="selectNotExistProperty" type="@BasicValueObject"><![CDATA[
+        SELECT 123 not_exist
+    ]]></select>
+    
+    <select selector="selectReadonlyProperty" type="@ValueObjectA"><![CDATA[
+        SELECT 123 readonly_value
+    ]]></select>
+    
+    <select selector="selectIncompatibleProperty" type="@ValueObjectA"><![CDATA[
+        SELECT 123 number_object
+    ]]></select>
+    
+    <select selector="selectIncompatibleProperty2" type="@ValueObjectA"><![CDATA[
+        SELECT 3.14 decimal
+    ]]></select>
+    
+</dao>

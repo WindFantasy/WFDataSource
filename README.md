@@ -11,7 +11,7 @@ WFDataSource is a solution for doing SQLite. It allows you to bind methods of `p
 	- [Types And Values](#types-and-values)
 	- [Operations](#operations)
 	- [SQL Parameter And Binding Parameter](#sql-parameter-and-binding-parameter)
-- [Create an Connection](#create-sqlite-connection)
+- [Create an Connection](#create-an-connection)
 - [Data Access Object](#data-access-object)
 	- [DAO Script](#dao-script)
 	- [DAO Protocol](#dao-protocol)
@@ -20,7 +20,8 @@ WFDataSource is a solution for doing SQLite. It allows you to bind methods of `p
 		- [Insert Operation](#insert-operation)
 		- [Delete Operation](#delete-operation)
 		- [Update Operation](#update-operation)
-		- [Select Operation](#select-operation)
+		- [Select Operation (with Primary Result)](#select-operation-with-primary-result)
+		- [Select Operation (with Entity Result)](#select-operation-with-entity-result)
 - [SQL Stream](#sql-stream)
 - [License](#license)
 
@@ -308,6 +309,8 @@ The following code block will build a update SQL by using all the columns define
 ```
 | Attribute | Description |
 | --- | --- |
+| `table` | The name of table schema for the auto-build SQL base on. |
+| `exclude` | The columns excluded from the auto-build SQL. Separate with commas ',' for multiple columns. |
 | `where` | The `WHERE` statement component, which restrict where the update should take place. |
 
 ### Select Operation (with Primary Result)

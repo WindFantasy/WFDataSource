@@ -8,10 +8,20 @@ WFDataSource is a solution for doing SQLite. It allows you to bind methods of `p
 - [Installation](#installation)
 - [Example of Usage](#example-of-usage)
 - [Concepts](#concepts)
-    - [Types And Values](#types-and-values)
-    - [Operations](#operations)
-    - [Prepared Statements And Binding Parameter](#prepared-statements-and-binding-parameter)
-- [Basic Usage](#basic-usage)
+	- [Types And Values](#types-and-values)
+	- [Operations](#operations)
+	- [SQL Parameter And Binding Parameter](#sql-parameter-and-binding-parameter)
+- [Create an Connection](#create-sqlite-connection)
+- [Data Access Object](#data-access-object)
+	- [DAO Script](#dao-script)
+	- [DAO Protocol](#dao-protocol)
+	- [Instantiate DAO](#instantiate-dao)
+	- [DAO Operations](#dao-operations)
+		- [Insert Operation](#insert-operation)
+		- [Delete Operation](#delete-operation)
+		- [Update Operation](#update-operation)
+		- [Select Operation](#select-operation)
+- [SQL Stream](#sql-stream)
 - [License](#license)
 
 # Design Phylosophy
@@ -67,9 +77,11 @@ NSArray<EmployeeEntity *> *employees = [dao selectAll];
 # Concepts
 
 
-WFDataSource hides the low level SQL interaction from users including *Statement* and *Result Set*. WFDataSource also build a standard of data types to simply the usage. WFDataSource try to work with SQLite just like working with a native object. However you still need to understand some of this concepts to work with WFDataSource. 
+`WFDataSource` hides the low level SQL interaction (eg. *Statement* and *Result Set* ...) from users. `WFDataSource` try to make things as simple as working with native ObjC object. However, certain concepts need to be know before using `WFDataSource`. 
 
 ## Types And Values
+
+WFDataSource not going to compatible to all data types. It support the followings. 
 
 | SQLite Type | Objective-C Type | NULL Value | Comment |
 |---|---|---|---|
@@ -78,7 +90,7 @@ WFDataSource hides the low level SQL interaction from users including *Statement
 | `TEXT` | `NSString *` | `nil` |  |
 | `DATETIME` | `NSDate *` | `nil` | Stored as double, which represents the number of seconds from *Reference-date* (00:00:00 UTC on 1 January 2001).  |
 
-Data types to WFDataSource are more strict than SQLite.
+Some more restrictions:
 
 ### NO Type Alias
 
@@ -149,11 +161,9 @@ In WFDataSource *Colon Notation* SQL works with *Entity* parameter. WFDataSource
 
 **NOTE**: Selector of *Colon Notation* base operation always has only ONE explict parameter, which is an *Entity*.
 
-# Basic Usage
+# Create an Connection
 
-## Create an SQLite Connection
-
-First of all create a connection to the database.
+To using `WFDataSource`, first we need to create a connection to the database.
 
 ```objc
 WFDSConnection *connection = [WFDSConnection connectionWithDocumentPath:@"main.sqlite"];
@@ -161,42 +171,62 @@ WFDSConnection *connection = [WFDSConnection connectionWithDocumentPath:@"main.s
 
 WFDConnection is a class represents connection to SQLite database. Above is how you might create a database connection. It will look for a database named *main.sqlite* under the document directory (specifiied by `NSDocumentDirectory`). Database will be created automatically if not exist.
 
-## The Data Access Object
+# Data Access Object
 
-A Data Access Object (DAO) is a object instance to handle database access. That includes:
+A Data Access Object (DAO) is a object instance for handling database. Basically it handles the following tasks:
 
-- Binds parameters to SQL statement
-- Executes SQL statement
+- Binds parameters to SQL statement.
+- Executes SQL.
 - Convert query result to Object instance.
 
-WFDataSource manage DAO automatically, No need to interact database with low level API. All you need are:
+To create a DAO you need: a DAO script, a DAO protocol.
 
-1. Write a `.dao.xml` script (The DAO script) to store the statements going to be used in your app.
-2. Write an Objective-C protocol (The DAO protocol) to tell how do you going to access the DAO.
-3. Create a DAO from the DAO script and the DAO protocol. And then interact with the database with the Data Access Object. 
+## DAO Script
 
+A DAO script is a xml-base script, whose file extension is `.dao.xml`. DAO script MUST located in main bundle. It is where you write your SQL and define the selector it binds to. 
 
-## The `.dao.xml` Script
-
-`.dao.xml` script or called the 'DAO script' is a xml-base script with file extension `.dao.xml` inside the app main bundle. A DAO script begins with a pair of `<dao>` tags:
+A DAO script begins with a pair of `<dao>` tags and with operation tags in between. A typical example would be something like this: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <dao>
-	...
+    <insert selector="insert:" table="employee"/>
+    <select selector="selectAll" type="EmployeeEntity"><![CDATA[
+    SELECT * FROM employee
+    ]]></select>
+...
 </dao>
 ```
-In between the `<dao>` tags are operation tags. They are `<insert>`, `<delete>`, `<update>` and `<select>`. Every operation has following components:
+Operation tags include `<insert>`, `<delete>`, `<update>` and `<select>`. Operation tag has the following xml components:
 
-| Component | XML Type | Description |
-|---|---|---|
-| CDATA block | Component | Where to write the statement. |
-| selector | Attribute | A string attribute to specify the selector of DAO that the operation going to bind with. |
-| trace | Attribute | A boolean attribute specify whether print the trace log to console when the operation is invoked. For Debug purpose. |
+| Component | XML Type | Required | Description |
+|---|---|---|---|
+| CDATA block | Component | true | Where to write the statement. |
+| selector | Attribute | true | A string attribute to specify the selector of DAO that the operation going to bind with. |
+| trace | Attribute | false | A boolean attribute specify whether print the trace log to console when the operation is invoked. For Debug purpose. |
 
-## The DAO Protocol
+## DAO Protocol
 
-A DAO Protocol is the interface of the DAO managed by WFDataSource.
+A DAO Protocol is an Objective-C protocol that going to bind with a DAO script. It is the interface to access the DAO operations. A DAO protocol would be something like this:
+```objc
+@protocol EmployeeDao <NSObject>
+-(NSInteger)insert:(EmployeeEntity *)entity;
+-(NSArray<EmployeeEntity *> *)selectAll;
+...
+@end
+```
+
+## Instantiate DAO
+
+To create a DAO instance, you should do something like this:
+
+```objc
+id<EmployeeDao> dao = [WFDSDaoManager.sharedManager instantiateDaoWithConnection:connection script:@"employee" protocol:@protocol(EmployeeDao)];
+```
+
+The above creates a DAO instance confirm to protocol `EmployeeDao` according to its DAO Script `employee.dao.xml`.
+
+## DAO Operations 
 
 ### Insert Operation
 

@@ -1,21 +1,22 @@
 PODS:
-  - WFStream (1.0.0)
+  - WFStream (1.0.1)
 
 DEPENDENCIES:
-  - WFStream (from `https://github.com/WindFantasy/WFStream.git`)
+  - WFStream (from `https://github.com/WindFantasy/WFStream.git`, tag `1.0.1`)
 
 EXTERNAL SOURCES:
   WFStream:
     :git: https://github.com/WindFantasy/WFStream.git
+    :tag: 1.0.1
 
 CHECKOUT OPTIONS:
   WFStream:
-    :commit: 81d828aa9db7634b58c3b4d20040e6e66ecd4d8b
     :git: https://github.com/WindFantasy/WFStream.git
+    :tag: 1.0.1
 
 SPEC CHECKSUMS:
-  WFStream: a806141a8854787d3ab98bd23cba7023fb17d0f3
+  WFStream: 6e765f6dbf6bbd066acd58814ca4e48726ec5c42
 
-PODFILE CHECKSUM: bd2869d2951317315c6a7536828b0d47df8fbb54
+PODFILE CHECKSUM: 1baf81f53221955c36a118f086df4ed324645cfe
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

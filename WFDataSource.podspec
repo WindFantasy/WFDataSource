@@ -1,15 +1,14 @@
 Pod::Spec.new do |spec|
   spec.name         = "WFDataSource"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "WFDataSource is for doing SQLite easier."
 
-  spec.homepage     = "https://bitbucket.org/windfantasy/wfdatasource"
+  spec.homepage     = "https://github.com/WindFantasy/WFDataSource"
   spec.license      = "MIT"
   spec.author       = { "Jerry" => "windfant@sina.com" }
-  spec.platform     = :ios, "10.0"
-  spec.source       = { :git => "https://windfantasy@bitbucket.org/windfantasy/wfdatasource.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/WindFantasy/WFDataSource.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "**/*.{h,m}"
+  spec.source_files  = "WFDataSource/**/*.{h,m}"
   spec.exclude_files = "WFDataSourceDemo", "WFDataSourceTests"
 
   spec.public_header_files = "**/WFDSDaoManager.h", "**/WFDataSource.h", "**/WFDSConnection.h"
